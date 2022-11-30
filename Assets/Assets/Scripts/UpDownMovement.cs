@@ -12,7 +12,7 @@ public class UpDownMovement : MonoBehaviour
 
     public PhotonView pv1,pv2;
 
-    private void Awake1()
+    private void Awake()
     {
         rb1 = GetComponent<Rigidbody2D>();
         bc1 = GetComponent<BoxCollider2D>();

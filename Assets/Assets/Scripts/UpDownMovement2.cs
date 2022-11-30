@@ -4,38 +4,39 @@ using UnityEngine;
 
 public class UpDownMovement2 : MonoBehaviour
 {
-    [SerializeField] private float updownspeed;
+    [SerializeField] private float updownspeed2;
 
-    private Rigidbody2D rb;
-    private BoxCollider2D bc;
+    private Rigidbody2D rb2;
+    private BoxCollider2D bc2;
 
-    public PhotonView pv;
+    public PhotonView pv2;
 
-    private void Awake()
+    private void Awake2()
     {
-        rb = GetComponent<Rigidbody2D>();
-        bc = GetComponent<BoxCollider2D>();
+        rb2 = GetComponent<Rigidbody2D>();
+        bc2 = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
     {
-        CheckInput();
+        CheckInput2();
         /*if(pv.isMine)
         {
             CheckInput();
         }*/
     }
 
-    private void CheckInput()
+    private void CheckInput2()
     {
-        var move = new Vector3(0, Input.GetAxisRaw("Vertical"));
+        Vector3 posY = transform.position;
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            transform.position += move * updownspeed * Time.deltaTime;
+            posY.y += updownspeed2 * Time.deltaTime; 
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.position += move * updownspeed * Time.deltaTime;
+            posY.y -= updownspeed2 * Time.deltaTime;
         }
+        transform.position = posY;
     }
 }

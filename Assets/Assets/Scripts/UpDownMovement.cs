@@ -1,42 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class UpDownMovement : MonoBehaviour
+public class UpDownMovement2 : MonoBehaviour
 {
-    [SerializeField] private float updownspeed;
+    [SerializeField] private float updownspeed1;
 
-    private Rigidbody2D rb;
-    private BoxCollider2D bc;
+    private Rigidbody2D rb1;
+    private BoxCollider2D bc1;
 
-    public PhotonView pv;
+    public PhotonView pv1;
 
-    private void Awake()
+    private void Awake1()
     {
-        rb = GetComponent<Rigidbody2D>();
-        bc = GetComponent<BoxCollider2D>();
+        rb1 = GetComponent<Rigidbody2D>();
+        bc1 = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
     {
-        CheckInput();
+        CheckInput1();
         /*if(pv.isMine)
         {
             CheckInput();
         }*/
     }
 
-    private void CheckInput()
+    private void CheckInput1()
     {
-        var move = new Vector3(0, Input.GetAxisRaw("Vertical"));
-        if(Input.GetKey(KeyCode.W))
+        Vector3 posY = transform.position;
+        if (Input.GetKey(KeyCode.W))
         {
-            transform.position += move *updownspeed * Time.deltaTime;
+            posY.y += updownspeed1 * Time.deltaTime;
         }
-        else if(Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
-            transform.position += move * updownspeed * Time.deltaTime;
+            posY.y -= updownspeed1 * Time.deltaTime;
         }
+        transform.position = posY;
     }
 }

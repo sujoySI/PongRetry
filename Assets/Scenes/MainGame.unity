@@ -1036,10 +1036,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1bd09ccdb761634198daf0c14b2a980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updownspeed1: 10
-  updownspeed2: 0
-  pv1: {fileID: 544258027}
-  pv2: {fileID: 0}
+  updownspeed: 10
+  upKey: 119
+  downKey: 115
+  pv: {fileID: 544258027}
 --- !u!114 &544258027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1883,10 +1883,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1bd09ccdb761634198daf0c14b2a980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updownspeed1: 0
-  updownspeed2: 10
-  pv1: {fileID: 0}
-  pv2: {fileID: 1244054697}
+  updownspeed: 10
+  upKey: 273
+  downKey: 274
+  pv: {fileID: 1244054697}
 --- !u!1 &1370690983
 GameObject:
   m_ObjectHideFlags: 0

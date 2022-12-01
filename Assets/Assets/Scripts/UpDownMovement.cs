@@ -5,20 +5,18 @@ using UnityEngine;
 
 public class UpDownMovement : MonoBehaviour
 {
-    [SerializeField] private float updownspeed1,updownspeed2;
+    [SerializeField] private float updownspeed;
+    [SerializeField] KeyCode upKey,downKey;
 
-    private Rigidbody2D rb1,rb2;
-    private BoxCollider2D bc1,bc2;
+    private Rigidbody2D rb;
+    private BoxCollider2D bc;
 
-    public PhotonView pv1,pv2;
+    public PhotonView pv;
 
     private void Awake()
     {
-        rb1 = GetComponent<Rigidbody2D>();
-        bc1 = GetComponent<BoxCollider2D>();
-
-        rb2 = GetComponent<Rigidbody2D>();
-        bc2 = GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
+        bc = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
@@ -27,40 +25,20 @@ public class UpDownMovement : MonoBehaviour
         {
             CheckInput();
         }*/
-        if(gameObject.tag == "P1")
-        {
-            CheckInput1();
-        }
-        else if(gameObject.tag == "P2/AI")
-        {
-            CheckInput2();
-        }
+        CheckInput();
     }
 
-    private void CheckInput1()
+    private void CheckInput()
     {
-        Vector3 posY1 = transform.position;
-        if (Input.GetKey(KeyCode.W))
+        Vector3 posY = transform.position;
+        if (Input.GetKey(upKey))
         {
-            posY1.y += updownspeed1 * Time.deltaTime;
+            posY.y += updownspeed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(downKey))
         {
-            posY1.y -= updownspeed1 * Time.deltaTime;
+            posY.y -= updownspeed * Time.deltaTime;
         }
-        transform.position = posY1;
-    }
-    private void CheckInput2()
-    {
-        Vector3 posY2 = transform.position;
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            posY2.y += updownspeed2 * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            posY2.y -= updownspeed2 * Time.deltaTime;
-        }
-        transform.position = posY2;
+        transform.position = posY;
     }
 }

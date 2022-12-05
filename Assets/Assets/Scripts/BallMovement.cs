@@ -24,14 +24,16 @@ public class BallMovement : MonoBehaviour
 
     private void PongMovement()
     {
-        posX= transform.position;
-        posY= transform.position;
+        posX = transform.position;
+        posY = transform.position;
         if(Input.GetKey(KeyCode.Space))
         {
             posX.x += ballmovespeed * Time.deltaTime;
             transform.position = posX;
+            Debug.Log(transform.position);
             posY.y += ballmovespeed * Time.deltaTime;
             transform.position = posY;
+            //Debug.Log(transform.position);
         }
     }
 }

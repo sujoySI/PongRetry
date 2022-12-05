@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StartTheGame : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Loads next scene.
     public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

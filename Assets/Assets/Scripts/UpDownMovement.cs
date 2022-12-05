@@ -6,7 +6,7 @@ using UnityEngine;
 public class UpDownMovement : MonoBehaviour
 {
     [SerializeField] private float updownspeed;
-    [SerializeField] KeyCode upKey,downKey;
+    [SerializeField] KeyCode upKey,downKey;//Sets input as a variable so we can control it from Editor
 
     private Rigidbody2D rb;
     private BoxCollider2D bc;
@@ -28,6 +28,7 @@ public class UpDownMovement : MonoBehaviour
         CheckInput();
     }
 
+    //Makes P1 and P2
     private void CheckInput()
     {
         Vector3 posY = transform.position;

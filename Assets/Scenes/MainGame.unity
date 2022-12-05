@@ -1473,6 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b85b8aea2ac9544b85f37a576f81021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ballmovespeed: 10
 --- !u!1 &980960025
 GameObject:
   m_ObjectHideFlags: 0

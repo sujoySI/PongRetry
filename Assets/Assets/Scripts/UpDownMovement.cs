@@ -11,6 +11,8 @@ public class UpDownMovement : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D bc;
 
+    private Vector3 posY;
+
     public PhotonView pv;
 
     private void Awake()
@@ -31,7 +33,7 @@ public class UpDownMovement : MonoBehaviour
     //Makes P1 and P2
     private void CheckInput()
     {
-        Vector3 posY = transform.position;
+        posY = transform.position;
         if (Input.GetKey(upKey))
         {
             posY.y += updownspeed * Time.deltaTime;

@@ -6,7 +6,7 @@ public class BallMovement : MonoBehaviour
 {
     [SerializeField] private float ballmovespeed;
 
-    private Vector3 posX, posY;
+    private Vector3 pos;
 
     private Rigidbody2D rb;
     private BoxCollider2D bc;
@@ -24,16 +24,12 @@ public class BallMovement : MonoBehaviour
 
     private void PongMovement()
     {
-        posX = transform.position;
-        posY = transform.position;
+        pos = transform.position;
         if(Input.GetKey(KeyCode.Space))
         {
-            posX.x += ballmovespeed * Time.deltaTime;
-            transform.position = posX;
-            Debug.Log(transform.position);
-            posY.y += ballmovespeed * Time.deltaTime;
-            transform.position = posY;
-            //Debug.Log(transform.position);
+            pos.x += ballmovespeed * Time.deltaTime;
+            pos.y += ballmovespeed * Time.deltaTime;
+            transform.position = pos;
         }
     }
 }

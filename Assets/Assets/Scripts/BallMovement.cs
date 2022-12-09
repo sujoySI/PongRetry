@@ -32,4 +32,8 @@ public class BallMovement : MonoBehaviour
             transform.position = pos;
         }
     }
+    private void RandInitiation()
+    {
+        
+    }
 }

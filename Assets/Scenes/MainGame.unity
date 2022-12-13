@@ -227,7 +227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48219402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -390.5973, y: -271.58603, z: -38.978405}
+  m_LocalPosition: {x: -391.2125, y: -271.58603, z: -38.978405}
   m_LocalScale: {x: 0.5543617, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -728,7 +728,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 435957422}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 21c3e7a8bc53f2643ac4a626b26eea3c, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -805,7 +805,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435957422}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.3, y: 0, z: 0}
+  m_LocalPosition: {x: 7.50015, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 1.8875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -970,7 +970,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544258021}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.2, y: 0, z: 0}
+  m_LocalPosition: {x: -7.50015, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 1.8875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1007,7 +1007,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 544258021}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 21c3e7a8bc53f2643ac4a626b26eea3c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1473,7 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b85b8aea2ac9544b85f37a576f81021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballmovespeed: 10
+  ballmovespeed: 5
   accelerationTime: 0.5
   maxSpeed: 50
 --- !u!1 &936385570
@@ -1839,7 +1839,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244054691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.2, y: 0, z: 0}
+  m_LocalPosition: {x: 7.50015, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 1.8875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1876,7 +1876,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1244054691}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 21c3e7a8bc53f2643ac4a626b26eea3c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2546,7 +2546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008814782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -407.8476, y: -271.58603, z: 0}
+  m_LocalPosition: {x: -407.2128, y: -271.58603, z: 0}
   m_LocalScale: {x: 0.5173801, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

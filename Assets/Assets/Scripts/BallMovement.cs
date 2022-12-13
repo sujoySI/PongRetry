@@ -28,12 +28,19 @@ public class BallMovement : MonoBehaviour
     private void PongMovement()
     {
         pos = transform.position;
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.J))
+        {
+            pos.x -= ballmovespeed * Time.deltaTime;
+            //pos.y += ballmovespeed * Time.deltaTime;
+            //transform.position = pos;
+        }
+        else if (Input.GetKey(KeyCode.L))
         {
             pos.x += ballmovespeed * Time.deltaTime;
-            pos.y += ballmovespeed * Time.deltaTime;
-            transform.position = pos;
+            //pos.y += ballmovespeed * Time.deltaTime;
+            //transform.position = pos;
         }
+        transform.position = pos;
     }
 
     /*private void PongBallMove()
@@ -42,9 +49,9 @@ public class BallMovement : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)
         {
-            //movement = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-            pos.x += /*new Vector3(Random.Range(-1f, 1f), 0)*//*Random.Range(-10f, 10f) * maxSpeed * Time.deltaTime;
-            pos.y += /*new Vector3(0, Random.Range(-1f, 1f))*//*Random.Range(-10f, 10f) * maxSpeed * Time.deltaTime;
+            movement = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            //pos.x += /*new Vector3(Random.Range(-1f, 1f), 0)*//*Random.Range(-10f, 10f) * maxSpeed * Time.deltaTime;
+            //pos.y += /*new Vector3(0, Random.Range(-1f, 1f))*//*Random.Range(-10f, 10f) * maxSpeed * Time.deltaTime;
             transform.position = pos;
             timeLeft += accelerationTime;
         }

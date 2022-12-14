@@ -61,4 +61,9 @@ public class BallMovement : MonoBehaviour
     {
         rb.AddForce(pos * maxSpeed);
     }*/
+
+    private bool LeftOrRight()
+    {
+        return false;
+    }
 }
